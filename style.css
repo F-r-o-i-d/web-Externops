@@ -1,0 +1,205 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+	--main-bg-color: #03045E;
+	--box-bg-color: #364693;
+	--box-shadow-color: #02295c;
+}
+body {
+	background-color: var(--main-bg-color);
+}
+.title{
+	color: white;
+	text-align: center;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	font-size: xx-large;
+	font-weight: bolder;
+}
+.slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 15px;
+	border-radius: 5px;
+	background: white;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+	.slider::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		background: #8dc6fc;
+		cursor: pointer;
+	}
+
+	.slider::-moz-range-thumb {
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		background: #8dc6fc;
+		cursor: pointer;
+	}
+.ClickBox {
+	margin-top: 10vh;
+	margin: 0 auto;
+	width: 50vw;
+	height: 50vh;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: var(--box-bg-color);
+	margin-bottom: 5vh;
+	box-shadow: -5px 5px 1px  var(--box-shadow-color);
+}
+
+.slidecontainer{
+	margin-bottom: 8vh;
+}
+.ClickBox h1 {
+	color: white;
+	text-align: center;
+	padding-bottom: 5vh;
+}
+.ClickBox #cps {
+	text-align: center;
+	color: indianred;
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#PinChanger{
+	position: absolute;
+	left: 50%;
+	border: none;
+	padding: 3px;
+	width: 8%;
+	text-align: center;
+	font-size: xx-large;
+	transform: translate(-50%,-50%);
+	background-color: #152368;
+	color: white;
+	border-radius: 1px;
+	display:inline-block;
+}
+.PinConnector{
+	position: absolute;
+	left: 50%;
+	border: none;
+	padding: 3px;
+	height: 8%;
+	width: 10%;
+	transform: translate(-50%,100%);
+	background-color: #152368;
+	color: white;
+	border-radius: 1px;
+	display:inline-block;
+	transition: 0.3s;
+
+}
+.PinConnector:hover{
+	background-color: #233380;
+	transition: 0.3s;
+}
+.PinDeconnector{
+	position: absolute;
+	left: 50%;
+	border: none;
+	padding: 3px;
+	height: 8%;
+	width: 10%;
+	transform: translate(-50%,100%);
+	background-color: #972b46;
+	color: white;
+	border-radius: 1px;
+	display:inline-block;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.PinConnector:hover{
+	box-shadow: -5px 5px 1px  var(--box-shadow-color);
+
+	transition: 0.3s;
+}
+.warning{
+	color: rgba(255, 91, 91, 0.452);
+}
+input[type=number] { 
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0; 
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
